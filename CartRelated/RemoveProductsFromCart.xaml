@@ -1,0 +1,218 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RemoveProductsFromCart" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1292,2639.2" sap2010:WorkflowViewState.IdRef="RemoveProductsFromCart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="RemoveProductsFromCart" sap:VirtualizedContainerService.HintSize="1302.4,2574.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="isCartNotEmpty" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File - Check if Cart is empty" sap:VirtualizedContainerService.HintSize="1240,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CartRelated\CheckIfCartIsEmpty.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_isCartNotEmpty">[isCartNotEmpty]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: STORE Cart Page" sap:VirtualizedContainerService.HintSize="1240,2332" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c447e64f-e238-4224-9718-62b32dd46e66" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <If Condition="[isCartNotEmpty]" DisplayName="If - Cart is Empty" sap:VirtualizedContainerService.HintSize="1206.4,2092" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Then>
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1172.8,1502.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110.4,1416" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isCartNotEmpty]" DisplayName="While - Delete all products" sap:VirtualizedContainerService.HintSize="1048,1304" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                    <ui:InterruptibleWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1014.4,1166.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NCheckState DisplayName="Check App State - Are there still Products to delete" Exists="[isCartNotEmpty]" sap:VirtualizedContainerService.HintSize="952,1080" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c447e64f-e238-4224-9718-62b32dd46e66" Version="V3">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,838.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="productName" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message - Cart is not empty" sap:VirtualizedContainerService.HintSize="387.2,184" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Cart is not empty&quot;]" />
+                              <uix:NGetText DisplayName="Get Text - Product Name" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="c447e64f-e238-4224-9718-62b32dd46e66" TextString="[productName]" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.demoblaze.com/cart.html" CvTextArea="184, 410, 152, 18" CvType="AnyWordGroup" DesignTimeRectangle="171, 390, 568, 156" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' class='' /&gt;" Guid="46ed8359-da80-447f-b878-0f69c628916a" ImageBase64="" InformativeScreenshot="690c9f03c6bbfff9c2b157cc98e54d9b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                </uix:NGetText.Target>
+                              </uix:NGetText>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Delete Product" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c447e64f-e238-4224-9718-62b32dd46e66" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.demoblaze.com/cart.html" CvTextArea="976, 408, 55, 17" CvTextArgument="Delete" CvType="Text" DesignTimeRectangle="978, 410, 54, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='Delete' check:innerText='Delete' /&gt;" Guid="f364ad38-f03e-4ea1-9367-a6eb2d877e88" InformativeScreenshot="4109a85c962d0430b0829126464145d3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <ui:LogMessage DisplayName="Log Message - Deletion Successful" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[String.Format(&quot;Successfully deleted {0} &quot;, productName)]" />
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,456.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message - Deleted all Products" sap:VirtualizedContainerService.HintSize="387.2,184" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No more Products to delete &quot;]" />
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Home Button" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c447e64f-e238-4224-9718-62b32dd46e66" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.demoblaze.com/cart.html" CvTextArea="561, 177, 57, 21" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="554, 165, 74, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='navbarExample' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='navbarExample' tag='A' type='' class='nav-link' aaname='Home (current)' check:innerText='Home&amp;#xD;&amp;#xA;(current)' /&gt;" Guid="13f72dff-51dc-4682-86f3-9dc942a48271" InformativeScreenshot="862e3c550d463ec1be74cf596115af77.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.demoblaze.com/cart.html" CvTextArea="976, 400, 55, 17" CvTextArgument="Delete" CvType="Text" DesignTimeRectangle="978, 401, 54, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='Delete' check:innerText='Delete' /&gt;" Guid="7c5a2a5c-8984-4e3c-9de0-3ea4e4fd86a3" InformativeScreenshot="46c720db97023dabbe5d50e0551cce1b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                          </uix:NCheckState.Target>
+                        </uix:NCheckState>
+                      </Sequence>
+                    </ui:InterruptibleWhile.Body>
+                  </ui:InterruptibleWhile>
+                </Sequence>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,451.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Cart is empty" sap:VirtualizedContainerService.HintSize="353.6,184" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Cart is empty&quot;]" />
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Home Button" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c447e64f-e238-4224-9718-62b32dd46e66" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www.demoblaze.com/cart.html" CvTextArea="561, 177, 57, 21" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="554, 165, 74, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='navbarExample' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='navbarExample' tag='A' type='' class='nav-link' aaname='Home (current)' check:innerText='Home&amp;#xD;&amp;#xA;(current)' /&gt;" Guid="13f72dff-51dc-4682-86f3-9dc942a48271" InformativeScreenshot="862e3c550d463ec1be74cf596115af77.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </Sequence>
+            </If.Else>
+          </If>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 2576, 1408" BrowserType="Edge" IconBase64="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" InformativeScreenshot="4070058236082df0a3712d190859dd9e.jpg" Selector="&lt;html app='msedge.exe' title='STORE' /&gt;" Title="STORE" Url="https://www.demoblaze.com/cart.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

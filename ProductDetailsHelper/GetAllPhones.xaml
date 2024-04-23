@@ -1,0 +1,274 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetAllPhones" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_phoneMultiMap" Type="OutArgument(scg:Dictionary(x:String, s:Object[]))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>821.6,2575.1999999999994</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetAllPhones_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetAllPhones" sap:VirtualizedContainerService.HintSize="784,2510.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: STORE" sap:VirtualizedContainerService.HintSize="721.6,2421.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fac478c8-1691-42c0-a426-3d95b4ded48b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,2181.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="phones" />
+              <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Default="[New Dictionary(Of String, Int32)]" Name="phoneMap" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[phones]" DisplayName="Extract Table Data - Phone Names and Price" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='phoneBrand'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='phonePrices'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='phoneDescription'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h4' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="625.6,197.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="fac478c8-1691-42c0-a426-3d95b4ded48b" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="578, -2, 1069, 1331" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='tbodyid' tag='DIV' /&gt;" Guid="25b18c31-4237-43b0-8008-fac6636d726c" InformativeScreenshot="f6b258997fee96dbebf92d03f622ca42.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <Assign DisplayName="Assign - instanting the multimap" sap:VirtualizedContainerService.HintSize="625.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:Object[])">[out_phoneMultiMap]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:Object[])">[New Dictionary(Of String, Object())()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[phones]" DisplayName="For Each Row in Data Table - going trough each product on the page" sap:VirtualizedContainerService.HintSize="625.6,1773.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,1583.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="tempBrand" />
+                      <Variable x:TypeArguments="x:Int32" Name="tempPrice" />
+                      <Variable x:TypeArguments="x:String" Name="tempDesc" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign - Assign values wich will be put in the map" sap:VirtualizedContainerService.HintSize="529.6,220" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[tempBrand]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[Currentrow("phoneBrand").ToString()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Int32">[tempPrice]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Integer.Parse(CurrentRow("phonePrices").ToString().Replace("$", ""))]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[tempDesc]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[Currentrow("phoneDescription").ToString()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <If Condition="[Not out_phoneMultiMap.ContainsKey(tempBrand)]" DisplayName="If - check for duplicates" sap:VirtualizedContainerService.HintSize="529.6,1276.8" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,618.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message - adding key, price and desc" sap:VirtualizedContainerService.HintSize="433.6,184" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[String.Format(&quot;Key doesn't exist, adding {0} and it's price {1} and information {2}&quot;,tempBrand,tempPrice,tempDesc)]" />
+                          <Assign DisplayName="Assign - adding the key" sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="s:Object[]">[out_phoneMultiMap(tempBrand)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="s:Object[]">[If(out_phoneMultiMap.ContainsKey(tempBrand), out_phoneMultiMap(tempBrand), New Object(1) {})]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign DisplayName="Assign - adding the price, so first object of value array" sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">[out_phoneMultiMap(tempBrand.ToString)(0)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Object">[tempPrice]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign DisplayName="Assign - adding the description, so second object of value array" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">[out_phoneMultiMap(tempBrand.ToString)(1)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Object">[tempDesc]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,496.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message - updating key price" sap:VirtualizedContainerService.HintSize="433.6,184" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Key already exists, updating price/description&quot;]" />
+                          <Assign DisplayName="Assign - update price" sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[phoneMap(tempBrand.ToString)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[tempPrice]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign DisplayName="Assign - update description" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">[out_phoneMultiMap(tempBrand.ToString)(1)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Object">[tempDesc]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 2576, 1408" BrowserType="Edge" IconBase64="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" InformativeScreenshot="6ec8a1850b942d45baa0ab51cbfdec7a.jpg" Selector="&lt;html app='msedge.exe' title='STORE' /&gt;" Title="STORE" Url="https://www.demoblaze.com/index.html#" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
